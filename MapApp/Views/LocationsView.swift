@@ -6,15 +6,22 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct LocationsView: View {
     
     @EnvironmentObject private var locationVM: LocationViewModel
     
     var body: some View {
-        List {
-            ForEach(locationVM.locations) {
-                Text($0.cityName)
+        ZStack {
+            Map(coordinateRegion: $locationVM.mapRegion)
+                .ignoresSafeArea()
+            
+            VStack(spacing: 0) {
+                header
+                    .padding()
+                
+                Spacer()
             }
         }
     }
@@ -23,4 +30,37 @@ struct LocationsView: View {
 #Preview {
     LocationsView()
         .environmentObject(LocationViewModel())
+}
+
+extension LocationsView {
+    var header: some View {
+        VStack {
+            Button {
+                locationVM.toggleLocationsList()
+            } label: {
+                Text(locationVM.mapLocation.name + "," + locationVM.mapLocation.cityName)
+                    .font(.title2)
+                    .fontWeight(.black)
+                    .foregroundStyle(.primary)
+                    .frame(height: 55)
+                    .frame(maxWidth: .infinity)
+                    .animation(.none, value: locationVM.mapLocation)
+                    .overlay(alignment: .leading) {
+                        Image(systemName: "arrow.down")
+                            .font(.headline)
+                            .foregroundStyle(.primary)
+                            .padding()
+                            .rotationEffect(Angle(degrees: locationVM.showLocationList ? 180 : 0))
+                    }
+            }
+            
+            if locationVM.showLocationList {
+                LocationsListView()
+            }
+        }
+        .foregroundStyle(.black)
+        .background(.thickMaterial)
+        .clipShape(RoundedRectangle(cornerRadius: 10))
+        .shadow(color: Color.black.opacity(0.3), radius: 20, x: 0, y: 15)
+    }
 }
