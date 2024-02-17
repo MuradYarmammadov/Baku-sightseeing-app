@@ -19,6 +19,7 @@
 		FA7165D72B7E2DF00071A3CA /* LocationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7165D62B7E2DF00071A3CA /* LocationsView.swift */; };
 		FA7165D92B7E325C0071A3CA /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7165D82B7E325C0071A3CA /* LocationViewModel.swift */; };
 		FAC1F6FF2B7F97570006DDC5 /* LocationsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC1F6FE2B7F97570006DDC5 /* LocationsListView.swift */; };
+		FAC1F7012B8110D20006DDC5 /* LocationPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC1F7002B8110D20006DDC5 /* LocationPreviewView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		FA7165D62B7E2DF00071A3CA /* LocationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsView.swift; sourceTree = "<group>"; };
 		FA7165D82B7E325C0071A3CA /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
 		FAC1F6FE2B7F97570006DDC5 /* LocationsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsListView.swift; sourceTree = "<group>"; };
+		FAC1F7002B8110D20006DDC5 /* LocationPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPreviewView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 			children = (
 				FA7165D62B7E2DF00071A3CA /* LocationsView.swift */,
 				FAC1F6FE2B7F97570006DDC5 /* LocationsListView.swift */,
+				FAC1F7002B8110D20006DDC5 /* LocationPreviewView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 			files = (
 				FA7165D52B7E1DA90071A3CA /* LocationsDataService.swift in Sources */,
 				FAC1F6FF2B7F97570006DDC5 /* LocationsListView.swift in Sources */,
+				FAC1F7012B8110D20006DDC5 /* LocationPreviewView.swift in Sources */,
 				FA7165D92B7E325C0071A3CA /* LocationViewModel.swift in Sources */,
 				FA7165A52B7E185A0071A3CA /* ContentView.swift in Sources */,
 				FA7165D72B7E2DF00071A3CA /* LocationsView.swift in Sources */,

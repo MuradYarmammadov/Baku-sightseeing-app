@@ -20,6 +20,7 @@ struct Location: Identifiable, Equatable {
         name + cityName
     }
     
+    //Equatable
     static func == (lhs: Location, rhs: Location) -> Bool {
         lhs.id == rhs.id
     }
