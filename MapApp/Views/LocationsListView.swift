@@ -10,7 +10,8 @@ import SwiftUI
 struct LocationsListView: View {
     
     @EnvironmentObject private var locationVM: LocationViewModel
-    
+    @Environment(\.colorScheme) var colorScheme
+
     var body: some View {
         List {
             ForEach(locationVM.locations) { location in
@@ -46,8 +47,10 @@ extension LocationsListView {
             VStack(alignment: .leading) {
                 Text(location.name)
                     .font(.headline)
+                    .foregroundStyle(colorScheme == .dark ? .white : .black)
                 Text(location.cityName)
                     .font(.subheadline)
+                    .foregroundStyle(colorScheme == .dark ? .white : .black)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
         }

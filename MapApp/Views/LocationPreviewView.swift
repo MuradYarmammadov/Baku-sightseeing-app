@@ -14,7 +14,7 @@ struct LocationPreviewView: View {
     
     var body: some View {
         HStack(alignment: .bottom, spacing: 0) {
-            VStack(spacing: 16.0) {
+            VStack(alignment: .leading, spacing: 16.0) {
                 imageSectiom
                 titleSection
             }
@@ -72,7 +72,7 @@ extension LocationPreviewView {
     
     private var learnMoreButton: some View {
         Button {
-            
+            locationVM.showSheet = location
         } label: {
             Text("Learn More")
                 .font(.headline)
